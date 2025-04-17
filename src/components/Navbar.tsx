@@ -1,15 +1,30 @@
-import React from "react";
 import { Link } from "react-router";
-
+import { ModeToggle } from "@/components/mode-toggle";
+import favicon from "@/assets/favicon.png";
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
+    <nav className="flex justify-between py-4 px-6 sm:py-6 sm:px-8 md:py-7 md:px-10 items-center dark:bg-gray-800 shadow-sm shadow-gray-200 dark:shadow-gray-700">
+      <div>
+        <img
+          src={favicon}
+          alt="favicon"
+          className="w-7 sm:w-9 md:w-10 aspect-square favicon-animation rounded-full"
+        />
+      </div>
+      <ul className="flex items-center gap-x-4 sm:gap-x-6 uppercase text-sm sm:text-base md:text-lg">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className="link-hover">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="about">About</Link>
+          <Link to="about" className="link-hover">
+            About
+          </Link>
+        </li>
+
+        <li>
+          <ModeToggle />
         </li>
       </ul>
     </nav>
