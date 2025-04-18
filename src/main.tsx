@@ -2,10 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "@/index.css";
 import App from "@/App";
-import ErrorBoundary from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/theme-provider";
-
-export default App;
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 const root = document.getElementById("root");
 const fallbackTxt = "The Root Element is not Defined";
@@ -15,10 +13,10 @@ if (!root) {
 }
 createRoot(root).render(
   <StrictMode>
-    <ThemeProvider storageKey="vite-ui-theme">
-      <ErrorBoundary>
+    <ErrorBoundary>
+      <ThemeProvider storageKey="vite-ui-theme">
         <App />
-      </ErrorBoundary>
-    </ThemeProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   </StrictMode>
 );

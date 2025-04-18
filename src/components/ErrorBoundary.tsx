@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from "react";
+import CoreErrorBoundary from "./CoreErrorBoundary";
 
 interface Props {
   children?: ReactNode;
@@ -26,14 +27,10 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError && this.state.errorMessage) {
       return (
-        <div className="h-svh w-svw flex justify-center items-center flex-col gap-y-0.5">
-          <h1 className="text-center text-2xl font-bold text-red-600 capitalize">
-            There was an Unexpected Error occured!
-          </h1>
-          <p className="text-lg font-medium capitalize">
-            {this.state.errorMessage}
-          </p>
-        </div>
+        <CoreErrorBoundary
+          type="global"
+          errorMessage={this.state.errorMessage}
+        />
       );
     }
 

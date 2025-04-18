@@ -125,11 +125,33 @@
   }
 }
 
-.link-hover {
-  @apply hover:underline hover:dark:text-cyan-400 hover:text-cyan-700;
-}
+@layer components {
+  .link-hover {
+    @apply hover:underline hover:dark:text-cyan-400 hover:text-cyan-700;
+  }
 
-.favicon-animation {
-  @apply transition-all duration-300 ease-in-out 
+  .favicon-animation {
+    @apply transition-all duration-300 ease-in-out 
   shadow-md shadow-gray-300 hover:shadow-xl hover:shadow-gray-400 dark:shadow-transparent dark:hover:shadow-gray-50;
+  }
+
+  .img-parent {
+    @apply perspective-distant;
+  }
+
+  .img-child {
+    @apply w-36
+    transition-all
+    duration-[800ms]
+    ease-in-out
+    transform-3d
+    hover:drop-shadow
+    hover:rotate-y-180
+    sm:mx-auto
+    sm:w-40
+    md:ml-auto
+    md:mr-0
+    md:w-48
+    lg:w-56;
+  }
 }
