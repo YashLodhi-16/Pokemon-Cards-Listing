@@ -4,7 +4,7 @@ import favicon from "@/assets/favicon.png";
 import { TbExternalLink } from "react-icons/tb";
 const Footer = () => {
   return (
-    <footer className="dark:bg-gray-900 bg-gray-50 grid gap-y-8 sm:gap-y-9 px-4 py-4 sm:px-6 sm:py-8 md:px-8 md:py-10 font-roboto">
+    <footer className="dark:bg-gray-900 bg-gray-50 grid gap-y-8 sm:gap-y-9 px-4 py-4 sm:px-6 sm:py-8 md:px-8 md:py-10 font-roboto border-t border-t-gray-300 dark:border-t-0">
       <div className="flex flex-wrap justify-evenly items-center text-sm sm:text-base md:text-lg">
         <ul>
           <li className="mb-2">
