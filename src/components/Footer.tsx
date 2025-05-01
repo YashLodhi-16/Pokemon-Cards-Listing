@@ -1,6 +1,5 @@
 import { Link } from "react-router";
-import { aboutRoute, homeRoute, VITE_POKEMON_API } from "@/constants";
-import favicon from "@/assets/favicon.png";
+import { AboutRoute, HomeRoute, VITE_POKEMON_API, Favicon } from "@/constants";
 import { TbExternalLink } from "react-icons/tb";
 const Footer = () => {
   return (
@@ -35,12 +34,12 @@ const Footer = () => {
             <h5 className="font-semibold text-md">Internal Links</h5>
           </li>
           <li>
-            <Link to={homeRoute} className="link-hover">
+            <Link to={HomeRoute} className="link-hover">
               Home
             </Link>
           </li>
           <li>
-            <Link to={aboutRoute} className="link-hover">
+            <Link to={AboutRoute} className="link-hover">
               About
             </Link>
           </li>
@@ -48,7 +47,7 @@ const Footer = () => {
       </div>
       <div>
         <img
-          src={favicon}
+          src={Favicon}
           alt="main logo"
           className="w-7 sm:w-9 md:w-11 aspect-square mx-auto mb-2 md:mb-3 favicon-animation rounded-full"
         />

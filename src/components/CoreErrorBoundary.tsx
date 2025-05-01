@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import krokorok from "@/assets/krokorok.png";
-import scizor from "@/assets/scizor.png";
+import { Krokorok, Scizor } from "@/constants";
+
 const CoreErrorBoundary = ({
   type = "global",
   errorMessage,
@@ -40,7 +40,7 @@ const CoreErrorBoundary = ({
       {type === "global" ? (
         <div className="img-parent">
           <img
-            src={scizor}
+            src={Scizor}
             alt="siczor hero image"
             className="img-child hover:drop-shadow-rose-400"
           />
@@ -48,8 +48,8 @@ const CoreErrorBoundary = ({
       ) : (
         <div className="img-parent">
           <img
-            src={krokorok}
-            alt="krokorok hero image"
+            src={Krokorok}
+            alt="Krokorok hero image"
             className="img-child hover:drop-shadow-amber-800"
           />
         </div>

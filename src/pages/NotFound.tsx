@@ -1,6 +1,5 @@
-import oshawott from "@/assets/oshawott.png";
 import { Button } from "@/components/ui/button";
-import { homeRoute } from "@/constants";
+import { HomeRoute, Oshawott } from "@/constants";
 import { Link } from "react-router";
 const NotFound = () => {
   return (
@@ -21,7 +20,7 @@ const NotFound = () => {
           navigation menu. If you believe this is an error, feel free to contact
           support.
         </p>
-        <Link to={homeRoute}>
+        <Link to={HomeRoute}>
           <Button
             variant="outline"
             size="default"
@@ -33,7 +32,7 @@ const NotFound = () => {
       </div>
       <div className="perspective-distant group sm:w-2/5">
         <img
-          src={oshawott}
+          src={Oshawott}
           alt="oshawott hero image"
           className="w-36 transition-all duration-[800ms] ease-in-out group-hover:drop-shadow group-hover:drop-shadow-cyan-400 group-hover:rotate-y-180 transform-3d sm:mx-auto sm:w-40 md:ml-auto md:mr-0 md:w-48 lg:w-56"
         />

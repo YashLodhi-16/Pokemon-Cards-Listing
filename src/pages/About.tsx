@@ -1,6 +1,5 @@
-import pikachu from "@/assets/pikachu.png";
 import { Button } from "@/components/ui/button";
-import { homeRoute } from "@/constants";
+import { HomeRoute, Pikachu } from "@/constants";
 import { Link } from "react-router";
 const About = () => {
   return (
@@ -21,7 +20,7 @@ const About = () => {
           Pokémon cards with essential details, making it a fun and engaging
           experience for fans and collectors alike.
         </p>
-        <Link to={homeRoute}>
+        <Link to={HomeRoute}>
           <Button
             variant="outline"
             size="default"
@@ -33,8 +32,8 @@ const About = () => {
       </div>
       <div className="perspective-distant group sm:w-2/5">
         <img
-          src={pikachu}
-          alt="pikachu hero image"
+          src={Pikachu}
+          alt="Pikachu hero image"
           className="w-36 transition-all duration-[800ms] ease-in-out group-hover:drop-shadow group-hover:drop-shadow-yellow-400 group-hover:rotate-y-180 transform-3d sm:mx-auto sm:w-40 md:ml-auto md:mr-0 md:w-48 lg:w-56"
         />
       </div>
