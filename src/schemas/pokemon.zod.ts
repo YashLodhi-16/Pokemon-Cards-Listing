@@ -17,9 +17,18 @@ export const zPokemon = z.object({
     legacy: z.string().trim().url(),
   }),
   height: z.number().int().nonnegative(),
-  held_items: z.tuple([]),
+  held_items: z.union([
+    z
+      .object({
+        item: z.object({
+          name: z.string().trim().nonempty(),
+          url: z.string().trim().url(),
+        }),
+      })
+      .array(),
+    z.tuple([]),
+  ]),
   id: z.number().int().nonnegative(),
-  is_default: z.boolean(),
   moves: z
     .object({
       move: z.object({
@@ -28,24 +37,6 @@ export const zPokemon = z.object({
     })
     .array(),
   name: z.string().trim().nonempty(),
-  order: z.number().int().nonnegative(),
-  past_abilities: z
-    .object({
-      abilities: z
-        .object({
-          ability: z.union([
-            z.null(),
-            z.object({ name: z.string().trim().nonempty() }),
-          ]),
-          is_hidden: z.boolean(),
-          slot: z.number().int().nonnegative(),
-        })
-        .array(),
-      generation: z.object({
-        name: z.string().trim().nonempty(),
-      }),
-    })
-    .array(),
   species: z.object({
     name: z.string().trim().nonempty(),
   }),
